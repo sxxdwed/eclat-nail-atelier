@@ -9,7 +9,7 @@
 
 ## Render configuration
 
-The included `render.yaml` creates one Node.js web service in Frankfurt with a persistent disk mounted at `/opt/render/project/src/data`.
+The included `render.yaml` creates one free Node.js web service in Frankfurt. This portfolio configuration uses Render's ephemeral filesystem, so bookings and reviews can reset after a restart or redeploy.
 
 Set these secret variables only in the Render Dashboard:
 
@@ -25,5 +25,5 @@ Do not add `PORT`; Render supplies it automatically.
 1. Open `/health` and verify `{ "ok": true }`.
 2. Verify `/.env`, `/server.js`, and `/data/booking-data.json` return 404.
 3. Submit one test booking, connect it to the client bot, and confirm it in the owner bot.
-4. Restart the Render service and confirm the booking remains on the persistent disk.
+4. Remember that the free portfolio deployment can sleep and reset locally stored booking data.
 5. Configure the Telegram Mini App URL as `https://YOUR-SERVICE.onrender.com/miniapp.html`.
