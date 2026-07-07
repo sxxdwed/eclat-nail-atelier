@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Éclat — запись</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://telegram.org/js/telegram-web-app.js?62"></script>
+  <link rel="stylesheet" href="miniapp.css">
+</head>
+<body>
+  <header class="app-header"><div><span>ÉCLAT</span><small>NAIL ATELIER</small></div><button id="roleButton" type="button">Для владельца</button></header>
+  <main>
+    <section id="loading" class="state-card">Загружаем приложение…</section>
+    <section id="clientView" hidden>
+      <div class="welcome"><p>ВАША КРАСОТА — В ДЕТАЛЯХ</p><h1>Запись<br><em>на маникюр</em></h1></div>
+      <div class="panel"><label>Дата<input id="clientDate" type="date"></label><div id="miniSlots" class="slot-grid"></div></div>
+      <div class="panel booking-details" id="miniBookingForm" hidden>
+        <h2>Оформить запись</h2><select id="miniService"><option>Маникюр без покрытия</option><option>Маникюр + гель-лак</option><option>Укрепление и покрытие</option><option>SPA-уход для рук</option></select><input id="miniName" placeholder="Ваше имя"><input id="miniPhone" type="tel" placeholder="Телефон"><button id="miniSubmit" class="primary">Отправить заявку</button>
+      </div>
+      <div class="section-title"><h2>Мои записи</h2></div><div id="myBookings" class="cards"></div>
+    </section>
+    <section id="adminView" hidden>
+      <div class="welcome admin"><p>ПАНЕЛЬ ВЛАДЕЛЬЦА</p><h1>Расписание<br><em>на день</em></h1></div>
+      <div class="panel"><label>Дата<input id="adminDate" type="date"></label></div>
+      <div id="adminSchedule" class="timeline"></div>
+    </section>
+    <dialog id="adminLogin"><form method="dialog"><button class="close" value="cancel">×</button><p>ДОСТУП ВЛАДЕЛЬЦА</p><h2>Введите пароль</h2><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Пароль администратора"><button id="adminLoginButton" type="button" class="primary">Войти</button><span id="loginStatus"></span></form></dialog>
+  </main>
+  <nav class="bottom-nav"><button data-screen="client" class="active">Запись</button><button data-screen="admin">Расписание</button></nav>
+  <div id="toast" class="toast"></div>
+  <script src="miniapp.js"></script>
+</body>
+</html>

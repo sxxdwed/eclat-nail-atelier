@@ -1,0 +1,13 @@
+{
+  "name": "eclat-nail-atelier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Éclat Nail Atelier website, booking API and Telegram bot",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check script.js && node --check miniapp.js"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
