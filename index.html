@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Éclat — камерная студия безупречного маникюра. Бережный уход, стойкое покрытие и тонкий nail-art.">
-  <meta name="theme-color" content="#fbf5ef">
-  <title>Éclat — студия маникюра</title>
+  <meta name="description" content="Éclat Nail Atelier — камерная студия маникюра в Екатеринбурге: аккуратный уход, стойкое покрытие и тонкий nail-art.">
+  <meta name="theme-color" content="#f7efe7">
+  <title>Éclat — nail atelier</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-premium-redesign-2">
+  <link rel="stylesheet" href="styles.css?v=2026-editorial-redesign-5">
 </head>
 <body>
   <header class="header">
     <a class="brand" href="#top" aria-label="Éclat, на главную">ÉCLAT<span>NAIL ATELIER</span></a>
     <nav class="nav" aria-label="Основная навигация">
-      <a href="#services">Услуги</a><a href="#gallery">Работы</a><a href="#reviews">Отзывы</a>
+      <a href="#services">Услуги</a>
+      <a href="#gallery">Работы</a>
+      <a href="#reviews">Отзывы</a>
     </nav>
     <a class="header-cta" href="#booking">Записаться</a>
   </header>
@@ -29,25 +31,45 @@
   <main id="top">
     <section class="hero" aria-label="Éclat Nail Atelier">
       <div class="hero-copy reveal">
-        <p class="eyebrow">КРАСОТА В ДЕТАЛЯХ · ЕКАТЕРИНБУРГ</p>
-        <h1>Маникюр, который<br><em>говорит о вас</em></h1>
-        <p class="hero-text">Камерная студия бережного ухода, где эстетика встречается с безупречной техникой.</p>
-        <div class="hero-actions"><a class="btn btn-dark" href="#booking">Выбрать время <span>↗</span></a><a class="text-link" href="#gallery">Смотреть работы</a></div>
-        <div class="hero-note"><span>4.9</span><div class="stars">★★★★★<small>более 320 отзывов</small></div></div>
+        <p class="eyebrow">Nail atelier · Екатеринбург</p>
+        <h1><span>Éclat</span> маникюр без лишнего шума</h1>
+        <p class="hero-text">Маникюр, покрытие и уход в спокойном салоне, где форма, оттенок и чистота работы важнее громких обещаний.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#booking">Выбрать время <span>↗</span></a>
+          <a class="text-link" href="#gallery">Посмотреть портфолио</a>
+        </div>
       </div>
-      <div class="hero-visual reveal">
+
+      <div class="hero-visual reveal" aria-hidden="true">
         <div class="hero-image"></div>
-        <div class="hero-tile hero-tile-a" aria-hidden="true"></div>
-        <div class="hero-tile hero-tile-b" aria-hidden="true"></div>
-        <div class="floating-card"><span>Ближайшее окно</span><strong id="nextSlot">Загружаем…</strong></div>
-        <span class="script-mark">éclat</span>
+        <div class="hero-tile hero-tile-a"></div>
+        <div class="hero-tile hero-tile-b"></div>
       </div>
+
+      <aside class="hero-note reveal" aria-label="Рейтинг студии">
+        <span>4.9</span>
+        <div class="stars">★★★★★<small>320+ опубликованных отзывов</small></div>
+      </aside>
+
+      <aside class="next-appointment reveal">
+        <small>Ближайшее окно</small>
+        <strong id="nextSlot">Загружаем…</strong>
+      </aside>
     </section>
 
-    <section class="marquee" aria-label="Преимущества"><span>СТЕРИЛЬНОСТЬ</span><i>✦</i><span>БЕРЕЖНЫЙ УХОД</span><i>✦</i><span>ТОНКАЯ РАБОТА</span><i>✦</i><span>ПРЕМИАЛЬНЫЕ МАТЕРИАЛЫ</span></section>
+    <section class="marquee" aria-label="Принципы студии">
+      <span>Стерильность</span><i>·</i><span>Ровная архитектура</span><i>·</i><span>Спокойная запись</span><i>·</i><span>Покрытие без спешки</span>
+    </section>
 
     <section class="services section" id="services">
-      <div class="section-heading reveal"><div><p class="eyebrow">МЕНЮ УСЛУГ</p><h2>Всё для красоты<br><em>ваших рук</em></h2></div><p>Мы не торопимся. Каждая процедура — маленький ритуал заботы о себе.</p></div>
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Услуги</p>
+          <h2>Прайс как меню ателье</h2>
+        </div>
+        <p>Короткий список базовых процедур. Если нужен дизайн сложнее — обсудим детали перед записью.</p>
+      </div>
+
       <div class="service-list">
         <article class="service reveal"><span class="num">01</span><div><h3>Маникюр без покрытия</h3><p>Снятие, обработка, уход</p></div><strong>1 500 ₽</strong><small>60 мин</small></article>
         <article class="service reveal"><span class="num">02</span><div><h3>Маникюр + гель-лак</h3><p>Выравнивание и стойкое покрытие</p></div><strong>2 500 ₽</strong><small>90 мин</small></article>
@@ -57,37 +79,84 @@
     </section>
 
     <section class="gallery section" id="gallery">
-      <div class="section-heading reveal"><div><p class="eyebrow">НАШИ РАБОТЫ</p><h2>Вдохновение<br><em>в каждом оттенке</em></h2></div><p>От молочной классики до глубоких акцентов — найдём ваш идеальный образ.</p></div>
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Портфолио</p>
+          <h2>Работы крупным планом</h2>
+        </div>
+        <p>Фотографии оставлены главным материалом страницы: без лишних рамок, с понятными фильтрами и быстрым просмотром деталей.</p>
+      </div>
+
       <div class="work-filter reveal" role="group" aria-label="Типы работ">
-        <button class="filter-chip active" type="button" data-filter="all">Все работы</button>
+        <button class="filter-chip active" type="button" data-filter="all">Все</button>
         <button class="filter-chip" type="button" data-filter="minimal">Минимализм</button>
         <button class="filter-chip" type="button" data-filter="classic">Классика</button>
-        <button class="filter-chip" type="button" data-filter="accent">Акцентные</button>
+        <button class="filter-chip" type="button" data-filter="accent">Акценты</button>
       </div>
+
       <div class="gallery-grid">
-        <button class="work-card shot-a reveal" type="button" data-category="minimal" data-work="lines" aria-label="Подробнее: Тонкие линии"><span class="work-number">01</span><span class="work-info"><small>МИНИМАЛИЗМ</small><strong>Тонкие линии</strong><i>Подробнее ↗</i></span></button>
-        <button class="work-card shot-b reveal" type="button" data-category="classic" data-work="milky" aria-label="Подробнее: Молочный маникюр"><span class="work-number">02</span><span class="work-info"><small>КЛАССИКА</small><strong>Молочный</strong><i>Подробнее ↗</i></span></button>
-        <button class="work-card shot-c reveal" type="button" data-category="accent" data-work="wine" aria-label="Подробнее: Винный маникюр"><span class="work-number">03</span><span class="work-info"><small>АКЦЕНТНЫЕ</small><strong>Глубокий винный</strong><i>Подробнее ↗</i></span></button>
-        <button class="work-card shot-d reveal" type="button" data-category="classic" data-work="french" aria-label="Подробнее: Французский маникюр"><span class="work-number">04</span><span class="work-info"><small>КЛАССИКА</small><strong>Нежный French</strong><i>Подробнее ↗</i></span></button>
+        <button class="work-card shot-a reveal" type="button" data-category="minimal" data-work="lines" aria-label="Подробнее: Тонкие линии"><span class="work-number">01</span><span class="work-info"><small>Минимализм</small><strong>Тонкие линии</strong><i>Открыть ↗</i></span></button>
+        <button class="work-card shot-b reveal" type="button" data-category="classic" data-work="milky" aria-label="Подробнее: Молочный маникюр"><span class="work-number">02</span><span class="work-info"><small>Классика</small><strong>Молочный</strong><i>Открыть ↗</i></span></button>
+        <button class="work-card shot-c reveal" type="button" data-category="accent" data-work="wine" aria-label="Подробнее: Винный маникюр"><span class="work-number">03</span><span class="work-info"><small>Акцент</small><strong>Глубокий винный</strong><i>Открыть ↗</i></span></button>
+        <button class="work-card shot-d reveal" type="button" data-category="classic" data-work="french" aria-label="Подробнее: Французский маникюр"><span class="work-number">04</span><span class="work-info"><small>Классика</small><strong>Нежный French</strong><i>Открыть ↗</i></span></button>
       </div>
     </section>
 
     <dialog class="work-dialog" id="workDialog" aria-labelledby="workTitle">
       <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
       <div class="dialog-photo" id="workPhoto" role="img"></div>
-      <div class="dialog-content"><p class="eyebrow" id="workCategory"></p><h3 id="workTitle"></h3><p id="workDescription"></p><dl><div><dt>Длительность</dt><dd id="workDuration"></dd></div><div><dt>Стоимость</dt><dd id="workPrice"></dd></div></dl><a class="btn btn-dark dialog-book" href="#booking">Записаться на этот дизайн <span>↗</span></a></div>
+      <div class="dialog-content">
+        <p class="eyebrow" id="workCategory"></p>
+        <h3 id="workTitle"></h3>
+        <p id="workDescription"></p>
+        <dl>
+          <div><dt>Длительность</dt><dd id="workDuration"></dd></div>
+          <div><dt>Стоимость</dt><dd id="workPrice"></dd></div>
+        </dl>
+        <a class="btn btn-dark dialog-book" href="#booking">Записаться на этот дизайн <span>↗</span></a>
+      </div>
     </dialog>
 
     <section class="reviews section" id="reviews">
-      <div class="reviews-heading reveal"><div><p class="eyebrow">ГОСТИ ГОВОРЯТ</p><h2>Доверие, которое<br><em>чувствуется</em></h2></div><button class="btn review-button" id="openReviewDialog" type="button">Оставить отзыв <span>↗</span></button></div>
-      <div class="review-stats reveal"><div class="rating-main"><strong>4.9</strong><span>★★★★★<small>средняя оценка из 5</small></span></div><div><strong>320+</strong><span>отзывов гостей</span></div><div><strong>98%</strong><span>возвращаются снова</span></div></div>
+      <div class="reviews-heading reveal">
+        <div>
+          <p class="eyebrow">Отзывы</p>
+          <h2>Что говорят после визита</h2>
+        </div>
+        <button class="btn review-button" id="openReviewDialog" type="button">Оставить отзыв <span>↗</span></button>
+      </div>
+
+      <div class="review-stats reveal">
+        <div class="rating-main"><strong>4.9</strong><span>★★★★★<small>средняя оценка</small></span></div>
+        <div><strong>320+</strong><span>отзывов гостей</span></div>
+        <div><strong>98%</strong><span>возвращаются снова</span></div>
+      </div>
+
       <div class="reviews-grid" id="reviewsGrid"><article class="review-card review-loading">Загружаем отзывы…</article></div>
     </section>
 
-    <dialog class="review-dialog" id="reviewDialog"><button class="dialog-close" id="closeReviewDialog" type="button" aria-label="Закрыть">×</button><div class="review-dialog-inner"><p class="eyebrow">ВАШЕ МНЕНИЕ ВАЖНО</p><h3>Оставьте отзыв<br>через Telegram</h3><p>Клиентский бот найдёт вашу завершённую запись, предложит выбрать оценку от 1 до 5 и отправит текст мастеру на модерацию.</p><a class="btn btn-dark" id="reviewTelegramLink" href="#" target="_blank" rel="noopener">Перейти в клиентский бот <span>↗</span></a><small>На сайте появляются только отзывы, одобренные мастером.</small></div></dialog>
+    <dialog class="review-dialog" id="reviewDialog">
+      <button class="dialog-close" id="closeReviewDialog" type="button" aria-label="Закрыть">×</button>
+      <div class="review-dialog-inner">
+        <p class="eyebrow">Отзыв через Telegram</p>
+        <h3>Напишите пару слов после визита</h3>
+        <p>Клиентский бот найдёт вашу завершённую запись, предложит выбрать оценку от 1 до 5 и отправит текст мастеру на модерацию.</p>
+        <a class="btn btn-dark" id="reviewTelegramLink" href="#" target="_blank" rel="noopener">Перейти в клиентский бот <span>↗</span></a>
+        <small>На сайте появляются только отзывы, одобренные мастером.</small>
+      </div>
+    </dialog>
 
     <section class="booking section" id="booking">
-      <div class="booking-copy reveal"><p class="eyebrow">ВАШЕ ВРЕМЯ ДЛЯ СЕБЯ</p><h2>Запишитесь<br><em>на процедуру</em></h2><p>Оставьте контакты — администратор свяжется с вами, чтобы подтвердить время.</p><div class="contact"><small>Понедельник–пятница, 10:00–20:00</small><a href="tel:+73431234567">+7 (343) 123-45-67</a></div></div>
+      <div class="booking-copy reveal">
+        <p class="eyebrow">Запись</p>
+        <h2>Оставьте удобное время</h2>
+        <p>После отправки заявка уйдёт администратору. Подтверждение и напоминание можно получать в клиентском Telegram-боте.</p>
+        <div class="contact">
+          <small>Понедельник–пятница, 10:00–20:00</small>
+          <a href="tel:+73431234567">+7 (343) 123-45-67</a>
+        </div>
+      </div>
+
       <form class="booking-form reveal" id="bookingForm">
         <label>Ваше имя<input name="name" type="text" placeholder="Как к вам обращаться?" required></label>
         <label>Телефон<input name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></label>
@@ -95,6 +164,7 @@
         <label>Желаемая дата<input name="date" type="date" required></label>
         <label>Свободное время<select name="time" required disabled><option value="">Сначала выберите дату</option></select></label>
         <p class="slot-hint" id="slotHint">Работаем по будням с 10:00 до 20:00, запись каждые 1,5 часа.</p>
+        <p class="booking-note">После отправки администратор подтвердит время. Если открыт клиентский бот — статус записи и напоминание придут в Telegram.</p>
         <label class="consent"><input type="checkbox" required><span>Согласен(на) на обработку персональных данных</span></label>
         <button class="btn btn-dark" type="submit">Отправить заявку <span>↗</span></button>
         <p class="form-status" id="formStatus" role="status"></p>
@@ -102,7 +172,12 @@
     </section>
   </main>
 
-  <footer><a class="brand light" href="#top">ÉCLAT<span>NAIL ATELIER</span></a><p>© 2026 Éclat Nail Atelier</p><div><a href="#">Instagram*</a><a href="#">Telegram</a></div></footer>
-  <script src="script.js?v=2026-premium-redesign-2"></script>
+  <footer>
+    <a class="brand light" href="#top">ÉCLAT<span>NAIL ATELIER</span></a>
+    <p>© 2026 Éclat Nail Atelier</p>
+    <div><a href="#">Instagram*</a><a href="#">Telegram</a></div>
+  </footer>
+
+  <script src="script.js?v=2026-editorial-redesign-5"></script>
 </body>
 </html>

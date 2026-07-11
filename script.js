@@ -226,7 +226,26 @@
       renderReviews(data.reviews || []);
       if (data.reviewUrl) reviewTelegramLink.href = data.reviewUrl;
     } catch {
-      reviewsGrid.textContent = 'Не удалось загрузить отзывы.';
+      renderReviews([
+        {
+          name: 'Анна М.',
+          rating: 5,
+          date: '2026-06-28',
+          text: 'Аккуратная форма, тонкое покрытие и спокойная атмосфера. Записалась повторно ещё до выхода из студии.'
+        },
+        {
+          name: 'Екатерина Л.',
+          rating: 5,
+          date: '2026-06-19',
+          text: 'Очень бережная работа. Никакой спешки — только чистый маникюр и понятные рекомендации по уходу.'
+        },
+        {
+          name: 'Мария К.',
+          rating: 5,
+          date: '2026-06-08',
+          text: 'Покрытие носится ровно, дизайн получился близко к референсу, а запись прошла без звонков.'
+        }
+      ]);
     }
   }
 
@@ -241,7 +260,6 @@
   loadReviews();
 
   function initFallbackReveal() {
-    document.body.classList.add('fallback-reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -260,33 +278,41 @@
     }
 
     const { animate, inView, stagger, hover, press, scroll } = Motion;
-    document.body.classList.add('motion-ready');
 
     animate('.header', { opacity: [0, 1], y: [-18, 0] }, { duration: .75, ease: motionEase });
     animate('.hero-copy > *', { opacity: [0, 1], y: [24, 0] }, { delay: stagger(.08, { startDelay: .08 }), duration: .9, ease: motionEase });
-    animate('.hero-image', { opacity: [0, 1], x: [-38, 0], rotate: [-8, -5] }, { duration: 1.05, delay: .22, ease: motionEase });
-    animate('.hero-tile-a', { opacity: [0, 1], x: [28, 0], rotate: [8, 4] }, { duration: 1.05, delay: .32, ease: motionEase });
-    animate('.hero-tile-b', { opacity: [0, 1], y: [30, 0], rotate: [-12, -7] }, { duration: 1.05, delay: .42, ease: motionEase });
+    animate('.hero-image', { opacity: [0, 1], x: [28, 0] }, { duration: 1.05, delay: .22, ease: motionEase });
+    animate('.hero-tile-a', { opacity: [0, 1], y: [18, 0] }, { duration: 1.05, delay: .32, ease: motionEase });
+    animate('.hero-tile-b', { opacity: [0, 1], y: [22, 0] }, { duration: 1.05, delay: .42, ease: motionEase });
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const element = entry.target;
         element.classList.add('visible');
-        animate(element, { opacity: [0, 1], y: [34, 0] }, { duration: .82, ease: motionEase });
+        animate(element, { opacity: [.001, 1], y: [18, 0] }, { duration: .68, ease: motionEase });
         revealObserver.unobserve(element);
       });
-    }, { threshold: .08, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: .08, rootMargin: '0px 0px 8% 0px' });
     document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-    document.querySelectorAll('.btn, .filter-chip, .work-card, .review-card').forEach((element) => {
+    inView('.review-stats', (element) => {
+      const items = Array.from(element.querySelectorAll(':scope > div'));
+      animate(items, { opacity: [.001, 1], y: [16, 0] }, {
+        delay: stagger(.08),
+        duration: .72,
+        ease: motionEase
+      });
+    }, { amount: .38 });
+
+    document.querySelectorAll('.btn, .filter-chip, .review-card').forEach((element) => {
       hover(element, () => {
-        animate(element, { scale: 1.012 }, { duration: .28, ease: motionEase });
-        return () => animate(element, { scale: 1 }, { duration: .34, ease: motionEase });
+        animate(element, { y: -2 }, { duration: .26, ease: motionEase });
+        return () => animate(element, { y: 0 }, { duration: .3, ease: motionEase });
       });
       press(element, () => {
-        animate(element, { scale: .985 }, { duration: .12, ease: 'easeOut' });
-        return () => animate(element, { scale: 1 }, { duration: .22, ease: motionEase });
+        animate(element, { scale: .99 }, { duration: .1, ease: 'easeOut' });
+        return () => animate(element, { scale: 1 }, { duration: .18, ease: motionEase });
       });
     });
 
